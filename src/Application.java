@@ -1,4 +1,3 @@
-package PolyGame;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -15,7 +14,7 @@ public class Application extends JFrame{
 
 		add(new Board());
 
-		setSize(250, 200);
+		setSize(500, 500);
 
 		setTitle("Application");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
