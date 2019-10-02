@@ -1,4 +1,5 @@
-package PolyGame.src;
+package polyGame;
+
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class Player extends Sprite{
 	}
 	private void createPlayer() {
 		
-		loadImage("src/pogchamp-twitch.png");
+		loadImage("src/resources/pogchamp-twitch.png");
 		getImageDimensions();
 	}
 	
@@ -25,6 +26,7 @@ public class Player extends Sprite{
 			x=1;
 		if(y<1)
 			y=1;
+		
 	}
 	
 

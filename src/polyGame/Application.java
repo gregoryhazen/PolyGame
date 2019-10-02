@@ -1,5 +1,4 @@
-package PolyGame.src;
-
+package polyGame;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 

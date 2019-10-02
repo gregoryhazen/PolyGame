@@ -1,4 +1,4 @@
-package PolyGame.src;
+package polyGame;
 
 import java.awt.Image;
 import java.awt.Rectangle;

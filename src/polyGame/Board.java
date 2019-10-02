@@ -1,4 +1,4 @@
-package PolyGame.src;
+package polyGame;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -73,7 +73,6 @@ public class Board extends JPanel implements ActionListener{
     private void updatePlayer() {
 
         if (player.isVisible()) {
-            
             player.move();
         }
     }
