@@ -1,4 +1,4 @@
-package polyGame;
+package gamepackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
