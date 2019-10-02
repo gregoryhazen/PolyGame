@@ -8,6 +8,7 @@ public class Application extends JFrame{
 	public Application(){
 		
 		initUI();
+		Control controls = new Control();
 
 	}
 
@@ -15,7 +16,8 @@ public class Application extends JFrame{
 
 		add(new Board());
 
-		setSize(250, 200);
+		setResizable(false);
+		pack();
 
 		setTitle("Application");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
