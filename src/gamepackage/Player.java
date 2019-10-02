@@ -15,12 +15,12 @@ public class Player extends Sprite{
 	}
 	private void createPlayer() {
 		
-		loadImage("src/resources/pogchamp-twitch.png");
+		loadImage("PolyGame/src/resources/pogchamp-twitch.png");
 		getImageDimensions();
 	}
 	
 	public void move() {
-		x+=dx;
+		x +=dx;
 		y +=dy;
 		if(x<1)
 			x=1;
