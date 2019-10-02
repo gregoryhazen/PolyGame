@@ -11,13 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
 
-public class Board extends JPanel implements ActionListener{
+public class Board extends JPanel implements KeyListener{
 
     private final int B_WIDTH = 400;
     private final int B_HEIGHT = 300;
@@ -27,8 +28,6 @@ public class Board extends JPanel implements ActionListener{
 	public Board() {
 		initBoard();
 	}
-	
-	
 	private void initBoard() {
         setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
 		addKeyListener(new TAdapter());
@@ -45,7 +44,7 @@ public class Board extends JPanel implements ActionListener{
                     this);
         }
         g.setColor(Color.WHITE);
-        g.drawString("Aliens left: ", 5, 15);
+        g.drawString("Allen was here", 5, 15);
 
         
 	}
@@ -53,30 +52,38 @@ public class Board extends JPanel implements ActionListener{
         super.paintComponent(g);
 
         if (ingame) {
-
             drawObjects(g);
-
         } 
 
         Toolkit.getDefaultToolkit().sync();
     }
 	
+	public void keyTyped(KeyEvent e) {
+		setBackground(Color.GREEN);
+	}
 	
-	public void actionPerformed(ActionEvent e) {
-
-        updatePlayer();
-
-        repaint();
-    }
+	public void keyPressed(KeyEvent e) {
+		setBackground(Color.WHITE);
+	}
 	
-
+	public void keyReleased(KeyEvent e) {
+		
+	}
+	
+	/*public void actionPerformed(KeyEvent e) {
+        //updatePlayer();
+        //repaint();
+		setBackground(Color.WHITE);
+	}
+	
+     
     private void updatePlayer() {
 
         if (player.isVisible()) {
             player.move();
         }
     }
-	
+	*/
     private class TAdapter extends KeyAdapter {
 
         @Override
@@ -88,7 +95,7 @@ public class Board extends JPanel implements ActionListener{
         public void keyPressed(KeyEvent e) {
             player.keyPressed(e);
         }
+        
     }
-    
 
 }
