@@ -17,8 +17,11 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 
 
-public class Board extends JPanel{
+public class Board extends JPanel implements ActionListener{
 
+    private final int B_WIDTH = 400;
+    private final int B_HEIGHT = 300;
+    private final int DELAY = 15;
 	private Player player;
 	private boolean ingame;
 	public Board() {
@@ -27,8 +30,8 @@ public class Board extends JPanel{
 	
 	
 	private void initBoard() {
-		
-	
+        setPreferredSize(new Dimension(B_WIDTH, B_HEIGHT));
+		addKeyListener(new TAdapter());
 		setFocusable(true);
         setBackground(Color.BLACK);
         ingame = true;
@@ -41,6 +44,9 @@ public class Board extends JPanel{
             g.drawImage(player.getImage(), player.getX(), player.getY(),
                     this);
         }
+        g.setColor(Color.WHITE);
+        g.drawString("Aliens left: ", 5, 15);
+
         
 	}
 	public void paintComponent(Graphics g) {
